@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    #wrap {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      transform: scale(0);
+      transition: transform 5s;
+    }
+    #wrap.active {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+<div id="wrap">
+</div>
+<button id="btn">点击</button>
+<script>
+  document.getElementById('btn').onclick = function () {
+    document.getElementById('wrap').classList.add('active');
+  }
+</script>
+</body>
+</html>

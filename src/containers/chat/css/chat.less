@@ -1,0 +1,52 @@
+.chat {
+  padding: 10px;
+  >img {
+    width: 2.5rem;
+  }
+  >div {
+    position: relative;
+    margin-top: 0.5rem;
+    border: 1px solid #eeeeee;
+    font-size: 16px;
+    background: #eeeeee;
+    border-radius: 5px;
+    max-width: 65%;
+    padding: 5px;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px;
+    }
+  }
+}
+
+.chat_left{
+  >img {
+    float: left;
+  }
+  .left_msg {
+    float: left;
+    margin-left: 1rem;
+    &::before {
+      left: -20px;
+      border-color: transparent #eeeeee transparent transparent;
+    }
+  }
+}
+
+.chat_right {
+  >img {
+    float: right;
+  }
+  .right_msg {
+    float: right;
+    margin-right: 1rem;
+    &::before {
+      right: -20px;
+      border-color: transparent transparent transparent #eeeeee;
+    }
+  }
+}
