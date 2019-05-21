@@ -2,11 +2,11 @@
 对话聊天的路由组件
 */
 import React, {Component} from 'react'
-import {NavBar, List, InputItem, Grid, Icon} from 'antd-mobile'
+import {NavBar,InputItem, Grid, Icon} from 'antd-mobile'
 import {connect} from 'react-redux'
 import {sendMsg, readMsg} from '../../redux/action'
 import './css/chat.less'
-import QueueAnim from 'rc-queue-anim'
+// import QueueAnim from 'rc-queue-anim'
 // const Item = List.Item;
 class Chat extends Component {
   state = {
