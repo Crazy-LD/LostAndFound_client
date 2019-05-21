@@ -1,0 +1,27 @@
+.am-card-body > .imagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  > img {
+    flex: 1;
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    margin: 0.5%;
+  }
+}
+.desc {
+  margin-top: 20px;
+}
+
+.desc > div {
+  margin-top: 5px;
+  &.desc_other {
+    display: flex;
+    .other_right {
+      flex: 1;
+    }
+  }
+}
