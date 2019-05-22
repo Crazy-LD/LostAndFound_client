@@ -13,7 +13,8 @@ import {
   REFUSE_FOOD,
   RECEIVE_ARTIVLE_LIST,
   RESET_SEND_REDIRECT,
-  CHANGE_STATUS
+  CHANGE_STATUS,
+  RESET_USER_REDIRECT
 } from './action-type'
 import {
   reqLogin,
@@ -35,6 +36,8 @@ const authSuccess = user => ({type: AUTH_SUCCESS, data: user});
 const receiveUser = user => ({type: RECEIVE_USER, data: user});
 // 同步重置用户信息
 export const resetUser = msg => ({type: RESET_USER, data: msg});
+// 重置用户登录，改注册时的路由重定向
+export const resetUserRedirect = () => ({type: RESET_USER_REDIRECT});
 //同步当前路径
 export const receiveCurrentPath = currentPath => ({type: RECEIVE_PATH, data: currentPath});
 // 同步获取消息列表
@@ -175,7 +178,8 @@ export const updateUser = user => {
     const response = await reqUpdate(user);
     const result = response.data;
     if (result.code === 0) {
-      dispatch(receiveUser(result.data))
+      dispatch(receiveUser(result.data));
+      getMsgList(dispatch, result.data._id);
     } else {
       dispatch(resetUser(result.msg))
     }
@@ -199,9 +203,9 @@ export const getUser = () => {
   }
 };
 /*异步发布失物信息*/
-export const sendFood = ({lName, address, contact, desc, images}) => {
+export const sendFood = (data) => {
   return async dispatch => {
-    const response = await reqSendArticle({lName, address, contact, desc, images});
+    const response = await reqSendArticle(data);
     const result = response.data;
     if (result.code === 0) {
       dispatch(receiveFood(result.data))

@@ -47,6 +47,12 @@ class Personal extends React.Component {
         this.props.history.replace(this.props.currentPath);
       }
   }
+
+  componentWillUnmount() {
+    document.body.removeEventListener('touchmove', this._handle);
+
+    document.body.removeEventListener('wheel', this._handle);
+  }
   render() {
     const {navList} = this;
     const {open} = this.state;

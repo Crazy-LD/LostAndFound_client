@@ -28,22 +28,27 @@ class UserItem extends Component {
         <Body>
         <div className="imagesContainer">
           {
-            item.images.map((imgItem, imgIndex) => <img src={imgItem} key={imgIndex} alt={item.name} onClick={() => showFullImg(imgItem)}/>)
+            item.images.map((imgItem, imgIndex) => <img
+              src={imgItem}
+              key={imgIndex}
+              alt={item.name}
+              style={{height: item.images.length === 1 ? '16rem' : item.images.length === 2 ? '8rem' : '5rem'}}
+              onClick={() => showFullImg(imgItem)}/>)
           }
         </div>
         <div className="desc">
           {isManager ? <div className='nowrap'>失物状态：<span>{item.status === 0 ? '正在寻找失主' : item.status === 1 ? '已经找到' : '已经删除'}</span></div> : null}
-          <div className='nowrap'>失物名称：<span>{item.lName}</span></div>
-          <div className='nowrap'>失物地点：<span>{item.address}</span></div>
+          <div className='nowrap title'>{item.isLost ? '大家帮忙找一找' : '失主快快来认领'}</div>
+          <div className='nowrap'>失物名称：<span dangerouslySetInnerHTML={{__html: item.lName}}/></div>
+          <div className='nowrap'>失物地点：<span dangerouslySetInnerHTML={{__html: item.address}}/></div>
           <div className='clearfix desc_other'>
             <div className="other_left">
               其他描述：
             </div>
-            <div className='other_right'>
-              {item.desc}
+            <div className='other_right' dangerouslySetInnerHTML={{__html: item.desc}}>
             </div>
           </div>
-          <div>联系方式：<span>{item.contact}</span></div>
+          <div>联系方式：<span dangerouslySetInnerHTML={{__html: item.contact}}/></div>
         </div>
         </Body>
         <Footer extra={this.formatTime(item.create_time)}/>

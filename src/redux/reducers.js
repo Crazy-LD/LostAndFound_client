@@ -15,7 +15,8 @@ import {
   REFUSE_FOOD,
   RESET_SEND_REDIRECT,
   RECEIVE_ARTIVLE_LIST,
-  CHANGE_STATUS
+  CHANGE_STATUS,
+  RESET_USER_REDIRECT
 } from './action-type'
 /*用户*/
 const initUser = {
@@ -37,6 +38,8 @@ function user(state = initUser, action) {
       return {...state, redirectTo};
     case RESET_USER:
       return {...initUser, msg:action.data};
+    case RESET_USER_REDIRECT:
+      return {...state, redirectTo: ''};
     default:
       return state
   }

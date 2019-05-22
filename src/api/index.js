@@ -17,7 +17,7 @@ export const reqReadMsg = (from) => ajax('/readmsg', {from}, 'POST');
 // 修改密码
 export const reqUpdatePassword = ({oldPassword, password}) => ajax('/updatepassword', {oldPassword,password}, 'POST');
 // 发布失物信息
-export const reqSendArticle = ({images, lName, address, contact, desc}) => ajax('/sendarticle', {images, lName, address, contact, desc}, 'POST') //, {headers: {'Content-Type': 'multipart/form-data'}}
+export const reqSendArticle = (data) => ajax('/sendarticle', data, 'POST') //, {headers: {'Content-Type': 'multipart/form-data'}}
 export const reqArticleList = () => ajax('/article');
 // 改变消息的状态
 export const reqChangeStatus = ({_lostId, status}) => ajax('/changestatus', {_lostId, status}, 'POST');

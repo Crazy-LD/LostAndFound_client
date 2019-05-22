@@ -12,24 +12,30 @@ import {
   InputItem,
   TextareaItem,
   Button,
-  Toast
+  Toast,
+  Radio
 } from 'antd-mobile'
-
+const RadioItem = Radio.RadioItem;
 class SendMsg extends React.Component{
   state = {
     files: [],
     lName: '', // 失物名称
     address: '', // 失物地址
     contact: '', // 联系方式
-    desc: '' // 其他描述
+    desc: '', // 其他描述
+    isLost: false // 是否东西丢失
   };
   componentWillUnmount() {
     this.props.resetSendRedirect();
   }
 
   render () {
-    const {files} = this.state;
+    const {files, isLost} = this.state;
     const {msg, redirect} = this.props.lostFood;
+    const data = [
+      { isLost: false, label: '失主快快来认领' },
+      { isLost: true, label: '大家帮忙找一找' },
+    ];
     if (msg) {
       Toast.fail(msg);
     }
@@ -53,6 +59,13 @@ class SendMsg extends React.Component{
             selectable={files.length < 9}
             multiple={true}
           />
+          <WhiteSpace/>
+          <h3>请选择失物类型：</h3>
+          {data.map(i => (
+            <RadioItem key={i.isLost} checked={isLost === i.isLost} onChange={() => this.setState({isLost: i.isLost})}>
+              {i.label}
+            </RadioItem>
+          ))}
           <WhiteSpace/>
           <InputItem type='text'
                      placeholder='请输入失物名称'
@@ -99,13 +112,15 @@ class SendMsg extends React.Component{
   }
 
   submit = () => {
-    const {lName, address, contact, desc, files} = this.state;
+    const {lName, address, contact, desc, files, isLost} = this.state;
     if (!lName || !address) {
       Toast.offline('名称和地址必填!!!', 1);
     } else {
       const images = [];
-      files.map(item => images.push(item.file));
-      this.props.sendFood({lName, address, contact, desc, images});
+      if (typeof files === 'object') {
+        files.map(item => images.push(item.file));
+      }
+      this.props.sendFood({lName, address, contact, desc, images, isLost});
     }
   }
 }

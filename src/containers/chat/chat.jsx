@@ -6,8 +6,6 @@ import {NavBar,InputItem, Grid, Icon} from 'antd-mobile'
 import {connect} from 'react-redux'
 import {sendMsg, readMsg} from '../../redux/action'
 import './css/chat.less'
-// import QueueAnim from 'rc-queue-anim'
-// const Item = List.Item;
 class Chat extends Component {
   state = {
     content: '',
@@ -38,15 +36,14 @@ class Chat extends Component {
   };
   componentWillMount () {
     const emojis = [
-      '😀', '🤣', '😂', '🤑', '🐺','😀', '🤣', '😂', '🤑', '🐺',
-      '😀', '🤣', '😂', '🤑', '🐺','😀', '🤣', '😂', '🤑', '🐺',
-      '😀', '🤣', '😂', '🤑', '🐺','😀', '🤣', '😂', '🤑', '🐺',
-      '😀', '🤣', '😂', '🤑', '🐺','😀', '🤣', '😂', '🤑', '🐺',
+      '😀', '🤣', '😂', '🤑', '🙂','😄', '🙃', '😉', '😊', '😇',
+      '😍', '🤩', '😘', '😗', '☺','😚', '😋', '😛', '😜', '🤪',
+      '😝', '😏', '😪', '💀', '☠','🤡', '💩', '👹', '💋', '👌',
+      '✌', '🤞', '🤟', '🤘', '🤙','☝', '👍', '🖕', '👀', '💍',
     ];
     this.emojis = emojis.map(emoji => ({text: emoji}))
   }
   componentDidMount () {
-    console.log('liale')
     window.scrollTo(0, document.body.scrollHeight)
   }
   componentDidUpdate () {

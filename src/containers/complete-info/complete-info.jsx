@@ -15,16 +15,19 @@ class CompleteInfo extends Component{
     signature: '',
     name: '',
   };
+
   setHeader = (header) => {
     this.setState({
       header
     })
   };
+
   handleChange = (name, val) => {
     this.setState({
       [name]:val
     })
   };
+
   handleClick = () => {
     const {header, signature, name} = this.state;
     if (!header || !signature || !name) {
@@ -34,6 +37,7 @@ class CompleteInfo extends Component{
       this.props.history.replace('/home');
     }
   };
+
   componentDidMount() {
     const {header, name, signature} = this.props.user;
     if (header || name || signature) {
@@ -58,6 +62,7 @@ class CompleteInfo extends Component{
       </div>
     )
   }
+
   goBack = () => {
     this.props.history.goBack();
   }

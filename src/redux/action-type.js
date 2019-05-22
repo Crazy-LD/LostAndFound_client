@@ -13,3 +13,4 @@ export const REFUSE_FOOD = 'refuse_food'; // 发布失物失败
 export const RECEIVE_ARTIVLE_LIST = 'receive_artivle_list'; // 接受所有的失物信息
 export const RESET_SEND_REDIRECT = 'reset_send_redirect'; // 重置sendMSG页面的重定向
 export const CHANGE_STATUS = 'change_status'; // 状态修改成功
+export const RESET_USER_REDIRECT = 'reset_user_redirect'; // 重置用户登录时的重定向
