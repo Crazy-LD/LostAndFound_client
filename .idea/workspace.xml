@@ -3,22 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3c8e17da-00e4-4456-9593-2cb301554f3d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user-item/css/user-item.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user-item/css/user-item.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user-item/user-item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user-item/user-item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user-list/css/user-list.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user-list/css/user-list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printscreen/chat.png" beforeDir="false" afterPath="$PROJECT_DIR$/printscreen/chat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printscreen/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/printscreen/home.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/user-list/user-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user-list/user-list.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/changePassword/changePassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/changePassword/changePassword.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/chat/chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chat/chat.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/complete-info/complete-info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/complete-info/complete-info.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/personal/personal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/personal/personal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/register/register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/sendMsg/sendMsg.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/sendMsg/sendMsg.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/action-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action-type.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/9.jpeg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,53 +28,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/register/register.jsx">
+      <file leaf-file-name="home.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/home/home.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="594">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#331#366#0" />
-                <element signature="e#386#432#0" />
-                <element signature="n#!!block;n#render#0;n#Register#0" />
-                <element signature="e#553#601#0" />
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#367#492#0" />
+                <element signature="e#392#478#0" />
+                <element signature="e#919#970#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/login/login.jsx">
+      <file leaf-file-name="user-list.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/user-list/user-list.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="-33">
+              <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#349#527#0" />
+                <element signature="e#1307#1673#0" />
+                <element signature="e#1375#1650#0" />
+                <element signature="e#1767#1908#0" />
+                <element signature="n#!!block;n#handleClick#0;n#UserList#0" />
+                <element signature="e#2030#2059#0" />
+                <element signature="e#2164#2205#0" />
+                <element signature="e#2229#2302#0" />
+                <element signature="e#2403#2500#0" />
+                <element signature="e#2524#2623#0" />
+                <element signature="e#2647#2746#0" />
+                <element signature="e#2752#2782#0" />
+                <element signature="e#2836#3252#0" />
+                <element signature="e#2907#3245#0" />
+                <element signature="e#3027#3237#0" />
+                <element signature="e#3271#3915#0" />
+                <element signature="e#3330#3834#0" />
+                <element signature="e#3477#3794#0" />
+                <element signature="e#3603#3784#0" />
+                <element signature="e#3662#3770#0" />
+                <element signature="e#3863#3908#0" />
+                <element signature="e#3921#4012#0" />
+                <element signature="e#3949#4004#0" />
+                <element signature="e#4034#4049#0" />
+                <element signature="e#4051#4622#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changePassword.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/containers/changePassword/changePassword.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+      <file leaf-file-name="chat.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printscreen/chat.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/redux/action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="39" column="30" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="30" />
-            </state>
-          </provider>
+      <file leaf-file-name="complete.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printscreen/complete.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="message.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printscreen/message.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="personal.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printscreen/personal.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="register.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printscreen/register.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="sendMsg.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/printscreen/sendMsg.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="home.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printscreen/home.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -170,19 +204,19 @@
         <option value="$PROJECT_DIR$/src/components/user-list/css/user-list.less" />
         <option value="$PROJECT_DIR$/src/containers/chat/chat.jsx" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/src/components/user-list/user-list.jsx" />
         <option value="$PROJECT_DIR$/src/containers/complete-info/complete-info.jsx" />
         <option value="$PROJECT_DIR$/src/api/index.js" />
         <option value="$PROJECT_DIR$/src/components/user-item/user-item.jsx" />
         <option value="$PROJECT_DIR$/src/components/user-item/css/user-item.less" />
         <option value="$PROJECT_DIR$/src/containers/sendMsg/sendMsg.jsx" />
-        <option value="$PROJECT_DIR$/src/containers/personal/personal.jsx" />
         <option value="$PROJECT_DIR$/src/redux/action-type.js" />
         <option value="$PROJECT_DIR$/src/redux/action.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers.js" />
         <option value="$PROJECT_DIR$/src/containers/register/register.jsx" />
         <option value="$PROJECT_DIR$/src/containers/login/login.jsx" />
         <option value="$PROJECT_DIR$/src/containers/changePassword/changePassword.jsx" />
+        <option value="$PROJECT_DIR$/src/containers/personal/personal.jsx" />
+        <option value="$PROJECT_DIR$/src/components/user-list/user-list.jsx" />
       </list>
     </option>
   </component>
@@ -202,7 +236,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="1364" />
     <option name="height" value="736" />
@@ -224,13 +258,12 @@
             <path>
               <item name="lostAndFound-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="lostAndFound-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="printscreen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lostAndFound-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="lostAndFound-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,7 +273,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="chan&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/changePassword/changePassword.jsx&#10;login&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/login/login.jsx&#10;regi&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/register/register.jsx&#10;red&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;action&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/action.js&#10;redu&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;change&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/changePassword/changePassword.jsx&#10;person&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx&#10;regis&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/register/register.jsx&#10;re&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;sendM&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/sendMsg/sendMsg.jsx&#10;compl&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/complete-info/complete-info.jsx&#10;home&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/home/home.jsx&#10;ac&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/action.js&#10;main&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/main/main.jsx&#10;reduc&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;comp&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/complete-info/complete-info.jsx&#10;chat&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/chat.jsx&#10;userli&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-list/user-list.jsx&#10;userlist&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-list/css/user-list.less&#10;useri&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-item/user-item.jsx&#10;admin&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/admin/admin.jsx&#10;user&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-list/user-list.jsx&#10;chat.j&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/chat.jsx&#10;mess&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/message/message.jsx&#10;chat.le&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/css/chat.less&#10;pers&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx&#10;admi&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/admin/admin.jsx&#10;head&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/header-selector/header-selector.jsx&#10;com&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/complete-info/complete-info.jsx&#10;his&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/history/history.jsx&#10;nav&#9;null&#9;null&#10;cha&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/chat.jsx&#10;send&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/sendMsg/sendMsg.jsx&#10;redue&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/node_modules/redux-devtools-extension&#10;news&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/news/news.jsx&#10;hist&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/history/history.jsx&#10; news&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/news/news.jsx&#10;perso&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/css/personal.less&#10;homne&#9;null&#9;null&#10;per&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx&#10;reduce&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;ajax&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/api/ajax.js&#10;api&#9;null&#9;null&#10;loginA&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/loginAndRegister/loginAndRegister.jsx&#10;loginAndR&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/loginAndRegister/loginAndRegister.jsx&#10;personal&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/nav-footer/images/personal.png&#10;persp&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/nav-footer/images/personal.png&#10;logi&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/login/login.jsx&#10;persona&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx" />
+    <property name="SearchEverywhereHistoryKey" value="home&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/home/home.jsx&#10;person&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx&#10;action&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/action.js&#10;chan&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/changePassword/changePassword.jsx&#10;login&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/login/login.jsx&#10;regi&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/register/register.jsx&#10;red&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;redu&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;change&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/changePassword/changePassword.jsx&#10;regis&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/register/register.jsx&#10;re&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;sendM&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/sendMsg/sendMsg.jsx&#10;compl&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/complete-info/complete-info.jsx&#10;ac&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/action.js&#10;main&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/main/main.jsx&#10;reduc&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;comp&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/complete-info/complete-info.jsx&#10;chat&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/chat.jsx&#10;userli&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-list/user-list.jsx&#10;userlist&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-list/css/user-list.less&#10;useri&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-item/user-item.jsx&#10;admin&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/admin/admin.jsx&#10;user&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/user-list/user-list.jsx&#10;chat.j&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/chat.jsx&#10;mess&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/message/message.jsx&#10;chat.le&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/css/chat.less&#10;pers&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx&#10;admi&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/admin/admin.jsx&#10;head&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/header-selector/header-selector.jsx&#10;com&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/complete-info/complete-info.jsx&#10;his&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/history/history.jsx&#10;nav&#9;null&#9;null&#10;cha&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/chat/chat.jsx&#10;send&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/sendMsg/sendMsg.jsx&#10;redue&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/node_modules/redux-devtools-extension&#10;news&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/news/news.jsx&#10;hist&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/history/history.jsx&#10; news&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/children/news/news.jsx&#10;perso&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/css/personal.less&#10;homne&#9;null&#9;null&#10;per&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx&#10;reduce&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/redux/reducers.js&#10;ajax&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/api/ajax.js&#10;api&#9;null&#9;null&#10;loginA&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/loginAndRegister/loginAndRegister.jsx&#10;loginAndR&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/loginAndRegister/loginAndRegister.jsx&#10;personal&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/nav-footer/images/personal.png&#10;persp&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/components/nav-footer/images/personal.png&#10;logi&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/login/login.jsx&#10;persona&#9;FILE&#9;file://E:/workplace/软件盛典/code/lostAndFound-client/src/containers/personal/personal.jsx" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/vueDemo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -316,15 +349,15 @@
       <workItem from="1558364908122" duration="82000" />
       <workItem from="1558394436248" duration="4389000" />
       <workItem from="1558490979746" duration="12046000" />
-      <workItem from="1558512136450" duration="9268000" />
+      <workItem from="1558512136450" duration="15948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287329000" />
+    <option name="totallyTimeSpent" value="294009000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12313433" />
@@ -382,19 +415,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/nav-footer/images/home.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav-footer/images/home.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/laoban-info/laoban-info.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/containers/laoban/laoban.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/containers/dashen/dashen.jsx" />
-    <entry file="file://$PROJECT_DIR$/src/utils/index.js" />
-    <entry file="file://$PROJECT_DIR$/../lostAndFound-server/public/images/myQQ.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/personal/children/about-us/css/about-us.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
@@ -525,16 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1056">
-            <caret line="32" column="259" selection-start-line="32" selection-start-column="259" selection-end-line="32" selection-end-column="259" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -626,57 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/home/home.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#367#492#0" />
-            <element signature="e#392#478#0" />
-            <element signature="e#919#970#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/user-list/user-list.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="e#349#527#0" />
-            <element signature="e#539#622#0" />
-            <element signature="n#!!block;n#render#0;n#UserList#0" />
-            <element signature="e#833#1929#0" />
-            <element signature="e#889#1748#0" />
-            <element signature="e#911#1727#0" />
-            <element signature="e#979#1213#0" />
-            <element signature="e#1307#1673#0" />
-            <element signature="e#1375#1650#0" />
-            <element signature="e#1767#1908#0" />
-            <element signature="n#!!block;n#handleClick#0;n#UserList#0" />
-            <element signature="e#2030#2059#0" />
-            <element signature="e#2144#2312#0" />
-            <element signature="e#2164#2205#0" />
-            <element signature="e#2229#2302#0" />
-            <element signature="n#!!block;n#listHandle#0;n#UserList#0" />
-            <element signature="e#2403#2500#0" />
-            <element signature="e#2524#2623#0" />
-            <element signature="e#2647#2746#0" />
-            <element signature="e#2752#2782#0" />
-            <element signature="e#4034#4049#0" />
-            <element signature="n#!!block;n#searchChange#0;n#UserList#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/complete-info/complete-info.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -729,49 +688,6 @@
             <element signature="e#0#25#0" expanded="true" />
             <element signature="n#!!block;n#componentWillUnmount#0;n#SendMsg#0" />
             <element signature="n#!!block;n#handleChange#0;n#SendMsg#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/personal/personal.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-          <folding>
-            <element signature="e#628#650#0" />
-            <element signature="e#665#1054#0" />
-            <element signature="e#690#798#0" />
-            <element signature="e#804#924#0" />
-            <element signature="e#930#1050#0" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Personal#0" />
-            <element signature="e#1116#1167#0" />
-            <element signature="e#1173#1242#0" />
-            <element signature="e#1417#1558#0" />
-            <element signature="e#1837#3510#0" />
-            <element signature="e#1851#2111#0" />
-            <element signature="e#1934#2076#0" />
-            <element signature="e#2120#3030#0" />
-            <element signature="e#2178#3015#0" />
-            <element signature="e#2228#2992#0" />
-            <element signature="e#2249#2527#0" />
-            <element signature="e#2281#2434#0" />
-            <element signature="e#2542#2972#0" />
-            <element signature="e#2563#2759#0" />
-            <element signature="e#2602#2738#0" />
-            <element signature="e#2774#2950#0" />
-            <element signature="e#3039#3497#0" />
-            <element signature="e#3112#3482#0" />
-            <element signature="e#3551#3649#0" />
-            <element signature="e#3675#3842#0" />
-            <element signature="e#3726#3764#0" />
-            <element signature="e#3770#3809#0" />
-            <element signature="n#!!block;n#scrollControl#0;n#Personal#0" />
-            <element signature="e#3875#3900#0" />
-            <element signature="n#!!block;n#_handle#0;n#Personal#0" />
-            <element signature="e#4466#4719#0" />
-            <element signature="e#4501#4714#0" />
-            <element signature="e#4529#4708#0" />
-            <element signature="e#4574#4700#0" />
           </folding>
         </state>
       </provider>
@@ -841,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/login/login.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -860,13 +769,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/changePassword/changePassword.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="317">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="611">
+            <caret line="32" column="259" selection-start-line="32" selection-start-column="259" selection-end-line="32" selection-end-column="259" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/personal/personal.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="149" column="67" lean-forward="true" selection-start-line="149" selection-start-column="67" selection-end-line="149" selection-end-column="67" />
+          <folding>
+            <element signature="e#665#1054#0" />
+            <element signature="e#690#798#0" />
+            <element signature="e#804#924#0" />
+            <element signature="e#930#1050#0" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Personal#0" />
+            <element signature="e#1116#1167#0" />
+            <element signature="e#1173#1242#0" />
+            <element signature="n#!!block;n#render#0;n#Personal#0" />
+            <element signature="e#1563#1976#0" />
+            <element signature="e#1578#1719#0" />
+            <element signature="e#1728#1871#0" />
+            <element signature="e#1880#1962#0" />
+            <element signature="e#1998#3671#0" />
+            <element signature="e#2012#2272#0" />
+            <element signature="e#2095#2237#0" />
+            <element signature="e#2281#3191#0" />
+            <element signature="e#2339#3176#0" />
+            <element signature="e#2389#3153#0" />
+            <element signature="e#2410#2688#0" />
+            <element signature="e#2442#2595#0" />
+            <element signature="e#2703#3133#0" />
+            <element signature="e#2724#2920#0" />
+            <element signature="e#2763#2899#0" />
+            <element signature="e#2935#3111#0" />
+            <element signature="e#3200#3658#0" />
+            <element signature="e#3273#3643#0" />
+            <element signature="e#3836#4003#0" />
+            <element signature="e#3887#3925#0" />
+            <element signature="e#3931#3970#0" />
+            <element signature="e#4662#4875#0" />
+            <element signature="e#4690#4869#0" />
+            <element signature="e#4735#4861#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/home/home.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#367#492#0" />
+            <element signature="e#392#478#0" />
+            <element signature="e#919#970#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-list/user-list.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#349#527#0" />
+            <element signature="e#1307#1673#0" />
+            <element signature="e#1375#1650#0" />
+            <element signature="e#1767#1908#0" />
+            <element signature="n#!!block;n#handleClick#0;n#UserList#0" />
+            <element signature="e#2030#2059#0" />
+            <element signature="e#2164#2205#0" />
+            <element signature="e#2229#2302#0" />
+            <element signature="e#2403#2500#0" />
+            <element signature="e#2524#2623#0" />
+            <element signature="e#2647#2746#0" />
+            <element signature="e#2752#2782#0" />
+            <element signature="e#2836#3252#0" />
+            <element signature="e#2907#3245#0" />
+            <element signature="e#3027#3237#0" />
+            <element signature="e#3271#3915#0" />
+            <element signature="e#3330#3834#0" />
+            <element signature="e#3477#3794#0" />
+            <element signature="e#3603#3784#0" />
+            <element signature="e#3662#3770#0" />
+            <element signature="e#3863#3908#0" />
+            <element signature="e#3921#4012#0" />
+            <element signature="e#3949#4004#0" />
+            <element signature="e#4034#4049#0" />
+            <element signature="e#4051#4622#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printscreen/chat.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printscreen/home.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printscreen/complete.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printscreen/message.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printscreen/personal.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printscreen/register.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printscreen/sendMsg.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import QueueAnim from 'rc-queue-anim'
 import './css/user-list.less'
 import UserItem from '../user-item/user-item'
+let timeInterId = 0; // 为了节流
 class UserList extends Component {
   static propTypes = {
     status: PropTypes.number,
@@ -16,7 +17,7 @@ class UserList extends Component {
   state = {
     fullSrc: '', // 详情图片
     isShow: false, // 是否显示详情图片
-    keyVal: '' // 关键字
+    keyVal: '', // 关键字
   };
   render () {
     const {status, foodList, _id, isManager} = this.props;
@@ -71,7 +72,7 @@ class UserList extends Component {
     setTimeout(() => {
       document.getElementById('fullImg').classList.add('active');
     }, 100)
-  }
+  };
 
   listHandle({status, foodList, _id, keyVal}) {
     let list = [];
@@ -138,7 +139,10 @@ class UserList extends Component {
   }*/
 
   searchChange(keyVal) {
-    this.setState({keyVal});
+    clearInterval(timeInterId);
+    timeInterId = setTimeout(() => {
+      this.setState({keyVal});
+    }, 200)
   }
 }
 export default withRouter(UserList)
