@@ -30,6 +30,8 @@ import {
   reqAddPhone,
   reqSmsLogin
 } from '../api'
+import configObj from '../config'
+const WS_BASE_URL = configObj.wsProtocol + '://' + configObj.port;
 // 同步错误消息
 const errorMsg = msg => ({type: ERROR_MSG, data: msg});
 // 同步成功响应
@@ -60,8 +62,8 @@ export const resetSendRedirect = () => ({type: RESET_SEND_REDIRECT});
 const changeStatusSucess = ({_lostId, status}) => ({type: CHANGE_STATUS, data: {_lostId, status}});
 function initIo(dispatch, userid) {
   if (!io.socket) {
-    console.log('连接ws://localhost:4000');
-    io.socket = io('ws://localhost:4000');
+    console.log('连接' + WS_BASE_URL);
+    io.socket = io(WS_BASE_URL);
     io.socket.on('receiveMsg', function (chatMsg) {
       console.log('客户端收到服务器端发送来的消息', chatMsg);
       if (userid === chatMsg.from || userid === chatMsg.to) {

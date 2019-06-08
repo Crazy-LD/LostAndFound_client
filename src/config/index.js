@@ -1,5 +1,6 @@
 export default {
   protocol: 'http',
-  host: 'localhost',
+  wsProtocol: 'ws',
+  host: '132.232.220.219',
   port: 4000
 }

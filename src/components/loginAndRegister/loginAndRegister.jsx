@@ -13,7 +13,8 @@ import {
 import PropTypes from 'prop-types'
 import Logo from '../../components/logo/logo'
 import './css/loginAndRegister.less'
-
+import configObj from '../../config'
+const BASR_URL = configObj.protocol + '://' + configObj.host + ':' + configObj.port;
 class LoginAndRegister extends Component{
   isResetCaptcha =  false; // 是否已经重置验证码
   static propTypes = {
@@ -58,19 +59,21 @@ class LoginAndRegister extends Component{
           {msg ? <p className='error-msg'>{msg}</p> : null}
           <List>
             <WhiteSpace/>
-            {
-              type === 'change' ? <InputItem type='password' placeholder='请输入旧密码' onChange={val => this.handleChange('oldPassword', val)}>旧密码:</InputItem>
-                : type === 'smslogin' || type === 'bindphone' ? <InputItem type='phone' placeholder='请输入手机号' onChange={val => this.handleChange('phone', val)} extra={<span onClick={this.getSmsCode} className={/^1\d{2}\s\d{4}\s\d{4}$/.test(phone) ? 'black' : ''} style={{float: 'right', marginTop: '1rem'}}>{sendedTime === 0 ? '获取验证码' : sendedTime + 's'}</span>}>手机号:</InputItem> : <InputItem placeholder='请输入用户名' onChange={val => this.handleChange('username', val)}>用户名:</InputItem>
-            }
+            <div className='captch'>
+              {
+                type === 'change' ? <InputItem type='password' placeholder='请输入旧密码' onChange={val => this.handleChange('oldPassword', val)}>旧密码:</InputItem>
+                  : type === 'smslogin' || type === 'bindphone' ? <InputItem type='phone' placeholder='请输入手机号' onChange={val => this.handleChange('phone', val)} extra={<span onClick={this.getSmsCode} className={/^1\d{2}\s\d{4}\s\d{4}$/.test(phone) ? 'black' : ''} style={{float: 'right', marginTop: '1rem'}}>{sendedTime === 0 ? '获取验证码' : sendedTime + 's'}</span>}>手机号:</InputItem> : <InputItem placeholder='请输入用户名' onChange={val => this.handleChange('username', val)}>用户名:</InputItem>
+              }
+            </div>
             <WhiteSpace/>
             {
               type === 'smslogin' || type === 'bindphone' ? null : <InputItem type='password' placeholder='请输入密码' onChange={val => this.handleChange('password', val)}>密&nbsp;&nbsp;&nbsp;码:</InputItem>
             }
             <WhiteSpace/>
-            <div id='captch'>
+            <div className='captch'>
               {
                 type === 'login' ? <React.Fragment>
-                  <InputItem type='text' placeholder='请输入验证码' onChange={val => this.handleChange('captcha', val)} extra={ <img style={{float: 'right'}} src="http://localhost:4000/captcha" alt="captcha" onClick={this.getCaptcha} ref={ref => this.captcha = ref}/>}>验证码:</InputItem>{/*<div className='clearfix'></div>*/}</React.Fragment>: type === 'smslogin' || type === 'bindphone' ? <InputItem type='text' placeholder='请输入短信验证码' onChange={val => this.handleChange('code', val)}>验证码:</InputItem> : <InputItem type='password' placeholder='请输入确认密码' onChange={val => this.handleChange('password2', val)}>确认密码:</InputItem>
+                  <InputItem type='text' placeholder='请输入验证码' onChange={val => this.handleChange('captcha', val)} extra={ <img style={{float: 'right'}} src={BASR_URL + '/captcha'} alt="captcha" onClick={this.getCaptcha} ref={ref => this.captcha = ref}/>}>验证码:</InputItem>{/*<div className='clearfix'></div>*/}</React.Fragment>: type === 'smslogin' || type === 'bindphone' ? <InputItem type='text' placeholder='请输入短信验证码' onChange={val => this.handleChange('code', val)}>验证码:</InputItem> : <InputItem type='password' placeholder='请输入确认密码' onChange={val => this.handleChange('password2', val)}>确认密码:</InputItem>
               }
             </div>
             <WhiteSpace/>
@@ -145,7 +148,7 @@ class LoginAndRegister extends Component{
     this.props.history.goBack();
   };
   getCaptcha = () => {
-    this.captcha.src = 'http://localhost:4000/captcha?time=' + Date.now();
+    this.captcha.src = BASR_URL + '/captcha?time=' + Date.now();
   };
   smsLogin = () => {
     const {code} = this.state;

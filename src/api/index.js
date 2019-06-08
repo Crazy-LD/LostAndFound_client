@@ -2,9 +2,9 @@
 包含多个ajax的请求函数
 */
 import ajax from './ajax'
-// import configObj from '../config/index'
-// const BASE_URL = configObj.protocol + '://' +  configObj.host + ':' +  configObj.port;
-const BASE_URL = "";
+import configObj from '../config/index'
+const BASE_URL = configObj.protocol + '://' +  configObj.host + ':' +  configObj.port;
+// const BASE_URL = "";
 // 请求注册
 export const reqRegister = user => ajax(BASE_URL + '/register', user, 'POST');
 // 请求登录
