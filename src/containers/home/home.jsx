@@ -18,7 +18,7 @@ class Home extends Component {
     return (
       <div>
         <NavBar className='sticky-header'
-                leftContent={<img src="/images/add.png" alt="" style={{width: '23%'}}/>}
+                leftContent={<img src={require('../../assets/images/add.png')} alt="" style={{width: '23%'}}/>}
                 onLeftClick={this.leftClick}>
           Lost & Found
         </NavBar>

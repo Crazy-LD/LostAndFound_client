@@ -65,6 +65,7 @@ function chat (state = initMsgList, action) {
   switch (action.type) {
     case RECEIVE_MSG_LIST:
       const {users, chatMsgs,userid} = action.data;
+      console.log("接受到消息");
       state = {
         users,
         chatMsgs,

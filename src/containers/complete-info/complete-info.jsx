@@ -12,7 +12,6 @@ import {updateUser} from '../../redux/action'
 class CompleteInfo extends Component{
   state = {
     header: '',
-    signature: '',
     name: '',
   };
 
@@ -29,9 +28,9 @@ class CompleteInfo extends Component{
   };
 
   handleClick = () => {
-    const {header, signature, name} = this.state;
-    if (!header || !signature || !name) {
-      Toast.offline('有选项漏掉了哦', 1);
+    const {header, name} = this.state;
+    if (!header || !name) {
+      Toast.offline('有选项漏掉了哦', 2);
     } else {
       this.props.updateUser(this.state);
       this.props.history.replace('/home');
@@ -39,9 +38,9 @@ class CompleteInfo extends Component{
   };
 
   componentDidMount() {
-    const {header, name, signature} = this.props.user;
-    if (header || name || signature) {
-      this.setState({header, name, signature});
+    const {header, name} = this.props.user;
+    if (header || name) {
+      this.setState({header, name});
 
     }
   }
@@ -50,14 +49,13 @@ class CompleteInfo extends Component{
     // if (header) {
     //   return <Redirect to='/home'/>
     // }
-    const {header, name, signature} = this.props.user;
+    const {header, name} = this.props.user;
     return (
       <div style={{marginTop: 50}}>
         <NavBar className='sticky-header' icon={<Icon type="left" size='lg'/>}
                 onLeftClick={this.goBack}>信息完善</NavBar>
         <HeaderSelector setHeader={this.setHeader} header={header}/>
         <InputItem placeholder={name ? name : '请输入昵称'} onChange={(val) => {this.handleChange('name', val)}}>昵称:</InputItem>
-        <InputItem placeholder={signature ? signature : '请输入个性签名'} onChange={(val) => {this.handleChange('signature', val)}}>个性签名:</InputItem>
         <Button type='primary' onClick={this.handleClick}>保&nbsp;&nbsp;&nbsp;存</Button>
       </div>
     )

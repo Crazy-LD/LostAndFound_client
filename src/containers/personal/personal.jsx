@@ -56,7 +56,7 @@ class Personal extends React.Component {
   render() {
     const {navList} = this;
     const {open} = this.state;
-    const {name, signature, header} = this.props.user;
+    const {name, phone, header} = this.props.user;
     const sidebar = (
       <List>
         <List.Item align='middle' onClick={() => {this.props.history.push('/completeinfo');this.onOpenChange()}}>
@@ -83,9 +83,9 @@ class Personal extends React.Component {
             <WhiteSpace/>
             <Card>
               <Header title={
-                <div id='personal'>
+                <div id='personal' onClick={this.bindPhone}>
                   <div className="name">{name}</div>
-                  <div className="sign">{signature}</div>
+                  <div className="sign">{phone || '绑定手机号'}</div>
                 </div>
               }
                       thumb={require(`../../assets/images/${header}.png`)}/>
@@ -165,12 +165,19 @@ class Personal extends React.Component {
         text: '确定',
         onPress: () => {
           Cookies.remove('userid');
+          console.log('shanchuio')
+          Cookies.remove('io');
           this.props.resetUser();
           this.props.receiveCurrentPath('');
         }
       }
     ])
   };
+  bindPhone = () => {
+    if (!this.props.user.phone) {
+      this.props.history.push("/bindphone");
+    }
+  }
 
 }
 export default connect(

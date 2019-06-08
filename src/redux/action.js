@@ -26,7 +26,9 @@ import {
   reqUpdatePassword,
   reqSendArticle,
   reqArticleList,
-  reqChangeStatus
+  reqChangeStatus,
+  reqAddPhone,
+  reqSmsLogin
 } from '../api'
 // 同步错误消息
 const errorMsg = msg => ({type: ERROR_MSG, data: msg});
@@ -35,7 +37,7 @@ const authSuccess = user => ({type: AUTH_SUCCESS, data: user});
 // 同步更新用户的信息
 const receiveUser = user => ({type: RECEIVE_USER, data: user});
 // 同步重置用户信息
-export const resetUser = msg => ({type: RESET_USER, data: msg});
+const resetUserSuccess = msg => ({type: RESET_USER, data: msg});
 // 重置用户登录，改注册时的路由重定向
 export const resetUserRedirect = () => ({type: RESET_USER_REDIRECT});
 //同步当前路径
@@ -55,9 +57,10 @@ const receiveArticleList = (data) => ({type: RECEIVE_ARTIVLE_LIST, data});
 // 重置发布消息的重定向
 export const resetSendRedirect = () => ({type: RESET_SEND_REDIRECT});
 // 同步更新状态
-const changeStatusSucess = ({_lostId, status}) => ({type: CHANGE_STATUS, data: {_lostId, status}})
+const changeStatusSucess = ({_lostId, status}) => ({type: CHANGE_STATUS, data: {_lostId, status}});
 function initIo(dispatch, userid) {
   if (!io.socket) {
+    console.log('连接ws://localhost:4000');
     io.socket = io('ws://localhost:4000');
     io.socket.on('receiveMsg', function (chatMsg) {
       console.log('客户端收到服务器端发送来的消息', chatMsg);
@@ -91,7 +94,7 @@ export const getArticle = () => {
   return dispatch => {
     getArticleList(dispatch);
   }
-}
+};
 /*
 阅读消息
 */
@@ -117,13 +120,7 @@ export const sendMsg = ({from, to, content}) => {
 /*
 异步注册
 */
-export function register({username, password, password2}) {
-  if (!username || !password) {
-    return errorMsg('用户名密码必须输入')
-  }
-  if (password !== password2) {
-    return errorMsg('密码和确认密码不同')
-  }
+export function register({username, password}) {
   return async dispatch => {
     const response = await reqRegister({username,password});
     const result = response.data;
@@ -139,12 +136,9 @@ export function register({username, password, password2}) {
 /*
 异步登录
 */
-export const login = ({username, password}) => {
-  if (!username || !password) {
-    return errorMsg('用户名密码必须输入')
-  }
+export const login = (data) => {
   return async dispatch => {
-    const response = await reqLogin({username, password});
+    const response = await reqLogin(data);
     const result = response.data;
     if (result.code === 0) {
       getMsgList(dispatch, result.data._id);
@@ -153,6 +147,14 @@ export const login = ({username, password}) => {
     } else {
       dispatch(errorMsg(result.msg))
     }
+  }
+};
+/*异步登出*/
+export const resetUser = msg => {
+  return async dispatch => {
+    io.socket.ondisconnect(); // 关闭socket连接
+    io.socket = null; // 并置为空，下次登录重新连接
+    dispatch(resetUserSuccess(msg));
   }
 };
 /*修改密码*/
@@ -225,6 +227,30 @@ export const changeStatus = ({_lostId, status}) => {
       dispatch(refuseFood(result.msg))
     }
   }
-}
-
-
+};
+/*添加手机号*/
+export const addPhone = (data) => {
+  return async dispatch => {
+    const response = await reqAddPhone(data);
+    const result = response.data;
+    if (result.code === 0) {
+      dispatch(authSuccess(result.data))
+    } else {
+      dispatch(errorMsg(result.msg))
+    }
+  }
+};
+/*短信登录*/
+export const smsLogin = (data) => {
+  return async dispatch => {
+    const response = await reqSmsLogin(data);
+    const result = response.data;
+    if (result.code === 0) {
+      getMsgList(dispatch, result.data._id);
+      getArticleList(dispatch);
+      dispatch(authSuccess(result.data))
+    } else {
+      dispatch(errorMsg(result.msg))
+    }
+  }
+};

@@ -13,7 +13,7 @@ class Login extends React.Component{
       return <Redirect to='home'/>
     }
     return (
-      <LoginAndRegister type='login' msg={msg} login={this.login} toRegister={this.toRegister}/>
+      <LoginAndRegister type='login' msg={msg} login={this.login} toRegister={this.toRegister} toSmsLogin={this.toSmsLogin}/>
     )
   }
   login = (data) => {
@@ -21,6 +21,9 @@ class Login extends React.Component{
   };
   toRegister = () => {
     this.props.history.replace('/register')
+  };
+  toSmsLogin = () => {
+    this.props.history.replace('/smslogin')
   };
 }
 export default connect(

@@ -106,7 +106,11 @@ class UserList extends Component {
           let value = item[key];
           if (key === 'lName' || key === 'address' || key === 'desc' || key === 'contact') {
             item[key] = value.replace(regex, function () {
-              weight++;
+              if (key === 'lName') {
+                weight += 5;
+              } else {
+                weight++;
+              }
               return '<span class="highLight">' + keyVal + '</span>'
             });
           }

@@ -12,6 +12,9 @@ class Register extends React.Component{
   toLogin = () => {
     this.props.history.replace('/login')
   };
+  toSmsLogin = () => {
+    this.props.history.replace('/smslogin')
+  };
   render () {
     const {redirectTo, msg} = this.props;
     console.log('redirectTo', redirectTo);
@@ -19,7 +22,7 @@ class Register extends React.Component{
       return <Redirect to={redirectTo}/>
     }
     return (
-      <LoginAndRegister type='register' toLogin={this.toLogin} register={this.register} msg={msg}/>
+      <LoginAndRegister type='register' toLogin={this.toLogin} register={this.register} msg={msg} toSmsLogin={this.toSmsLogin}/>
     )
   }
 

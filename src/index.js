@@ -5,6 +5,8 @@ import {Provider} from 'react-redux'
 import store from './redux/store'
 import Register from './containers/register/register'
 import Login from './containers/login/login'
+import SmsLogin from './containers/smsLogin/smsLogin'
+import BindPhone from './containers/bindPhone/bindPhone'
 import ChangePassword from './containers/changePassword/changePassword'
 import Main from './containers/main/main'
 import Admin from './containers/admin/admin'
@@ -17,6 +19,8 @@ ReactDOM.render(
         <Switch>
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>
+          <Route path='/smslogin' component={SmsLogin}/>
+          <Route path='/bindphone' component={BindPhone}/>
           <Route path='/changepassword' component={ChangePassword}/>
           <Route path='/admin' component={Admin}/>
           <Route component={Main}/>

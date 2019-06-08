@@ -1,13 +1,13 @@
 import axios from 'axios'
-
+axios.defaults.withCredentials=true;
 export default function ajax(url, data = {}, type = 'GET') {
  if (type === 'GET') {
-   let paramStr = ''
+   let paramStr = '';
    Object.keys(data).forEach((key, index) => {
      paramStr = key + '=' + data[key] + '&'
-   })
+   });
    if (paramStr) {
-     paramStr = paramStr.substring(0, paramStr.lastIndexOf('&'))
+     paramStr = paramStr.substring(0, paramStr.lastIndexOf('&'));
      url = url + '?' + paramStr
    }
    return axios.get(url)
