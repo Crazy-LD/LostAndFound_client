@@ -16,7 +16,9 @@ import {
   RESET_SEND_REDIRECT,
   RECEIVE_ARTIVLE_LIST,
   CHANGE_STATUS,
-  RESET_USER_REDIRECT
+  RESET_USER_REDIRECT,
+  RESET_USER_MSG,
+  UPDATE_USER_PHONE
 } from './action-type'
 /*用户*/
 const initUser = {
@@ -40,6 +42,10 @@ function user(state = initUser, action) {
       return {...initUser, msg:action.data};
     case RESET_USER_REDIRECT:
       return {...state, redirectTo: ''};
+    case UPDATE_USER_PHONE:
+      return {...action.data};
+    case RESET_USER_MSG:
+      return {...state, msg: ''};
     default:
       return state
   }

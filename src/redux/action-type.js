@@ -14,3 +14,5 @@ export const RECEIVE_ARTIVLE_LIST = 'receive_artivle_list'; // 接受所有的�
 export const RESET_SEND_REDIRECT = 'reset_send_redirect'; // 重置sendMSG页面的重定向
 export const CHANGE_STATUS = 'change_status'; // 状态修改成功
 export const RESET_USER_REDIRECT = 'reset_user_redirect'; // 重置用户登录时的重定向
+export const UPDATE_USER_PHONE = 'update_user_phone'; // 解绑手机成功
+export const RESET_USER_MSG = 'reset_user_msg'; // 重置用户错误信息

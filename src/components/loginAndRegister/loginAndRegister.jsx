@@ -40,6 +40,9 @@ class LoginAndRegister extends Component{
     code: '', // 短信验证码
     sendedTime: 0 // 短信剩下的时间
   };
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
   render () {
     const {msg, toLogin, type, toRegister, isShowLeft, toSmsLogin} = this.props;
     let {phone, sendedTime} = this.state;

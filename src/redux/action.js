@@ -14,7 +14,9 @@ import {
   RECEIVE_ARTIVLE_LIST,
   RESET_SEND_REDIRECT,
   CHANGE_STATUS,
-  RESET_USER_REDIRECT
+  RESET_USER_REDIRECT,
+  UPDATE_USER_PHONE,
+  RESET_USER_MSG
 } from './action-type'
 import {
   reqLogin,
@@ -28,7 +30,8 @@ import {
   reqArticleList,
   reqChangeStatus,
   reqAddPhone,
-  reqSmsLogin
+  reqSmsLogin,
+  reqRemovePhone
 } from '../api'
 import configObj from '../config'
 const WS_BASE_URL = configObj.wsProtocol + '://' + configObj.host + ':' +configObj.port;
@@ -60,6 +63,11 @@ const receiveArticleList = (data) => ({type: RECEIVE_ARTIVLE_LIST, data});
 export const resetSendRedirect = () => ({type: RESET_SEND_REDIRECT});
 // 同步更新状态
 const changeStatusSucess = ({_lostId, status}) => ({type: CHANGE_STATUS, data: {_lostId, status}});
+// 同步解绑手机成功
+const removePhoneSuccess = (data) => ({type: UPDATE_USER_PHONE, data});
+// 同步删除用户错误信息
+export const resetUserMsg = () => ({type: RESET_USER_MSG})
+
 function initIo(dispatch, userid) {
   if (!io.socket) {
     console.log('连接' + WS_BASE_URL);
@@ -237,6 +245,18 @@ export const addPhone = (data) => {
     const result = response.data;
     if (result.code === 0) {
       dispatch(authSuccess(result.data))
+    } else {
+      dispatch(errorMsg(result.msg))
+    }
+  }
+};
+/*删除手机号*/
+export const removePhone = (data) => {
+  return async dispatch => {
+    const response = await reqRemovePhone(data);
+    const result = response.data;
+    if (result.code === 0) {
+      dispatch(removePhoneSuccess(result.data))
     } else {
       dispatch(errorMsg(result.msg))
     }

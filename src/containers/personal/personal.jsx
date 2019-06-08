@@ -2,10 +2,11 @@
 用户个人中心路由组件
 */
 import React from 'react'
-import {WhiteSpace, Card, WingBlank, NavBar, Icon, List, Drawer, Modal} from 'antd-mobile'
+import {WhiteSpace, Card, WingBlank, NavBar, Icon, List, Drawer, Modal, Toast} from 'antd-mobile'
 import {connect} from 'react-redux'
 import {Switch, Route} from 'react-router-dom'
-import {receiveCurrentPath, resetUser} from '../../redux/action'
+import {receiveCurrentPath, resetUser, removePhone, resetUserMsg} from '../../redux/action'
+import {reqSendCode} from '../../api/index'
 import './css/personal.less'
 import NavFooter from '../../components/nav-footer/nav-footer'
 import News from './children/news/news'
@@ -50,13 +51,26 @@ class Personal extends React.Component {
 
   componentWillUnmount() {
     document.body.removeEventListener('touchmove', this._handle);
-
+    clearTimeout(this.timeoutId);
     document.body.removeEventListener('wheel', this._handle);
+  }
+  componentDidUpdate(prevProps) {
+    const msg = this.props.user.msg;
+    if (prevProps.user.msg !== msg && msg) {
+      Toast.fail(msg, 3, () => {
+        this.props.resetUserMsg();
+      });
+    }
   }
   render() {
     const {navList} = this;
     const {open} = this.state;
     const {name, phone, header} = this.props.user;
+    // if (msg) {
+    //   Toast.fail(msg, () => {
+    //     this.props.resetUserMsg();
+    //   });
+    // }
     const sidebar = (
       <List>
         <List.Item align='middle' onClick={() => {this.props.history.push('/completeinfo');this.onOpenChange()}}>
@@ -65,6 +79,11 @@ class Personal extends React.Component {
         <List.Item align='middle' onClick={() => {this.props.history.push('/changepassword');this.onOpenChange()}}>
           修改密码
         </List.Item>
+        {
+          phone ? <List.Item align='middle' onClick={() => {this.unBindPhone();this.onOpenChange()}}>
+            解除手机绑定
+          </List.Item> : null
+        }
         <List.Item align='middle' onClick={this.logout}>
           退出
         </List.Item>
@@ -174,14 +193,40 @@ class Personal extends React.Component {
     ])
   };
   bindPhone = () => {
-    if (!this.props.user.phone) {
+    const {phone} = this.props.user;
+    if (!phone) {
       this.props.history.push("/bindphone");
     }
+  };
+  unBindPhone = () => {
+    const {phone} = this.props.user;
+    if (!this.timeoutId) {
+      reqSendCode({phone});
+      this.timeoutId = setTimeout(() => {
+        clearTimeout(this.timeoutId);
+        this.timeoutId = null;
+      }, 60000)
+    }
+    Modal.prompt('验证码', '请输入你的验证码',
+      [
+        {
+          text: '取消',
+          onPress: () => {
+            Toast.info('成功取消', 1);
+          }
+        },
+        {
+          text: '确定',
+          onPress: code => {
+            this.props.removePhone({phone, code})
+          }
+        },
+      ], '', null)
   }
 
 }
 export default connect(
   state => ({user: state.user, currentPath: state.currentPath}),
-  {receiveCurrentPath, resetUser}
+  {receiveCurrentPath, resetUser, removePhone, resetUserMsg}
 )(Personal)
 
