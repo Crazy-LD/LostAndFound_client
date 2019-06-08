@@ -82,7 +82,7 @@ class Chat extends Component {
                 if (userid === msg.to) {
                   return (
                     <div className="chat chat_left clearfix" key={msg._id}>
-                      <img src={'images/' + header + '.png'} alt=""/>
+                      <img src={require('../../assets/images/' + header + '.png')} alt=""/>
                       <div className="left_msg">
                         {msg.content}
                       </div>
@@ -97,7 +97,7 @@ class Chat extends Component {
                 } else {
                   return (
                     <div className="chat chat_right clearfix" key={msg._id}>
-                      <img src={'images/' + users[userid].header + '.png'} alt=""/>
+                      <img src={require('../../assets/images/' + users[userid].header + '.png')} alt=""/>
                       <div className="right_msg">
                         {msg.content}
                       </div>

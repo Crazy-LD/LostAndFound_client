@@ -31,7 +31,7 @@ import {
   reqSmsLogin
 } from '../api'
 import configObj from '../config'
-const WS_BASE_URL = configObj.wsProtocol + '://' + configObj.port;
+const WS_BASE_URL = configObj.wsProtocol + '://' + configObj.host + ':' +configObj.port;
 // 同步错误消息
 const errorMsg = msg => ({type: ERROR_MSG, data: msg});
 // 同步成功响应
