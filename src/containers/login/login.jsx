@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import LoginAndRegister  from '../../components/loginAndRegister/loginAndRegister'
-import {login, resetUserRedirect} from '../../redux/action'
+import {login, resetUserRedirect, resetUserMsg} from '../../redux/action'
 import {Redirect} from 'react-router-dom'
 class Login extends React.Component{
   componentWillUnmount() {
@@ -13,7 +13,12 @@ class Login extends React.Component{
       return <Redirect to='home'/>
     }
     return (
-      <LoginAndRegister type='login' msg={msg} login={this.login} toRegister={this.toRegister} toSmsLogin={this.toSmsLogin}/>
+      <LoginAndRegister type='login'
+                        msg={msg}
+                        login={this.login}
+                        toRegister={this.toRegister}
+                        resetUserMsg={this.props.resetUserMsg}
+                        toSmsLogin={this.toSmsLogin}/>
     )
   }
   login = (data) => {
@@ -28,5 +33,5 @@ class Login extends React.Component{
 }
 export default connect(
   state => ({user: state.user}),
-  {login, resetUserRedirect}
+  {login, resetUserRedirect, resetUserMsg}
 )(Login);

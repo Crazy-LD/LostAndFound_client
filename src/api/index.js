@@ -31,3 +31,5 @@ export const reqAddPhone = (data) => ajax(BASE_URL + '/addphone', data, 'POST');
 export const reqRemovePhone = (data) => ajax(BASE_URL + '/removephone', data, 'POST');
 // 短信登录
 export const reqSmsLogin = (data) => ajax(BASE_URL + '/login_sms', data, 'POST');
+// 登出
+export const reqLogout = (username) => ajax(BASE_URL + '/logout', {username}, 'POST');

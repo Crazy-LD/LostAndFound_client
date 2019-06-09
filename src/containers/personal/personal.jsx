@@ -184,9 +184,8 @@ class Personal extends React.Component {
         text: '确定',
         onPress: () => {
           Cookies.remove('userid');
-          console.log('shanchuio')
           Cookies.remove('io');
-          this.props.resetUser();
+          this.props.resetUser(this.props.user.username);
           this.props.receiveCurrentPath('');
         }
       }

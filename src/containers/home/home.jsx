@@ -4,7 +4,11 @@ import {NavBar} from 'antd-mobile'
 import {Switch, Route} from 'react-router-dom'
 import UserList from '../../components/user-list/user-list'
 import SendMsg from '../../containers/sendMsg/sendMsg'
+import {getArticle} from '../../redux/action'
 class Home extends Component {
+  componentWillUnmount() {
+    this.props.getArticle();
+  }
   render () {
     if (this.props.location.pathname !== '/home') {
       return (
@@ -32,5 +36,5 @@ class Home extends Component {
 }
 export default connect(
   state => ({lostFood: state.lostFood, user: state.user}),
-  {}
+  {getArticle}
 )(Home)

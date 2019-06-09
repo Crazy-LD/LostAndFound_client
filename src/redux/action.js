@@ -31,7 +31,8 @@ import {
   reqChangeStatus,
   reqAddPhone,
   reqSmsLogin,
-  reqRemovePhone
+  reqRemovePhone,
+  reqLogout
 } from '../api'
 import configObj from '../config'
 const WS_BASE_URL = configObj.wsProtocol + '://' + configObj.host + ':' +configObj.port;
@@ -42,7 +43,7 @@ const authSuccess = user => ({type: AUTH_SUCCESS, data: user});
 // 同步更新用户的信息
 const receiveUser = user => ({type: RECEIVE_USER, data: user});
 // 同步重置用户信息
-const resetUserSuccess = msg => ({type: RESET_USER, data: msg});
+const resetUserSuccess = () => ({type: RESET_USER});
 // 重置用户登录，改注册时的路由重定向
 export const resetUserRedirect = () => ({type: RESET_USER_REDIRECT});
 //同步当前路径
@@ -160,11 +161,12 @@ export const login = (data) => {
   }
 };
 /*异步登出*/
-export const resetUser = msg => {
+export const resetUser = username => {
   return async dispatch => {
     io.socket.ondisconnect(); // 关闭socket连接
     io.socket = null; // 并置为空，下次登录重新连接
-    dispatch(resetUserSuccess(msg));
+    reqLogout(username);
+    dispatch(resetUserSuccess());
   }
 };
 /*修改密码*/

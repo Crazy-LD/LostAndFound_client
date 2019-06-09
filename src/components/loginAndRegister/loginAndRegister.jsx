@@ -43,6 +43,14 @@ class LoginAndRegister extends Component{
   componentWillUnmount() {
     clearInterval(this.intervalId);
   }
+  componentDidUpdate(prevProps) {
+    const msg = this.props.msg;
+    if (prevProps.msg !== msg && msg) {
+      Toast.fail(msg, 3, () => {
+        this.props.resetUserMsg();
+      });
+    }
+  }
   render () {
     const {msg, toLogin, type, toRegister, isShowLeft, toSmsLogin} = this.props;
     let {phone, sendedTime} = this.state;
@@ -59,7 +67,6 @@ class LoginAndRegister extends Component{
         }
         <Logo/>
         <WingBlank>
-          {msg ? <p className='error-msg'>{msg}</p> : null}
           <List>
             <WhiteSpace/>
             <div className='captch'>

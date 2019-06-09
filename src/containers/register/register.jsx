@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import LoginAndRegister from '../../components/loginAndRegister/loginAndRegister'
-import {register, resetUserRedirect} from '../../redux/action'
+import {register, resetUserRedirect, resetUserMsg} from '../../redux/action'
 import {Redirect} from 'react-router-dom'
 import '../../assets/css/index.less'
 
@@ -22,7 +22,12 @@ class Register extends React.Component{
       return <Redirect to={redirectTo}/>
     }
     return (
-      <LoginAndRegister type='register' toLogin={this.toLogin} register={this.register} msg={msg} toSmsLogin={this.toSmsLogin}/>
+      <LoginAndRegister type='register'
+                        toLogin={this.toLogin}
+                        register={this.register}
+                        msg={msg}
+                        resetUserMsg={this.props.resetUserMsg}
+                        toSmsLogin={this.toSmsLogin}/>
     )
   }
 
@@ -32,5 +37,5 @@ class Register extends React.Component{
 }
 export default connect(
   state => state.user,
-  {register, resetUserRedirect}
+  {register, resetUserRedirect, resetUserMsg}
 )(Register);

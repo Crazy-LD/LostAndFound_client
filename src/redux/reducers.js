@@ -39,7 +39,7 @@ function user(state = initUser, action) {
       redirectTo = state.header ? 'home' : 'completeinfo';
       return {...state, redirectTo};
     case RESET_USER:
-      return {...initUser, msg:action.data};
+      return {...initUser};
     case RESET_USER_REDIRECT:
       return {...state, redirectTo: ''};
     case UPDATE_USER_PHONE:

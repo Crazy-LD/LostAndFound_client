@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Toast} from 'antd-mobile'
 import LoginAndRegister from '../../components/loginAndRegister/loginAndRegister'
-import {updatePassword, resetUserRedirect} from '../../redux/action'
+import {updatePassword, resetUserRedirect, resetUserMsg} from '../../redux/action'
 import {Redirect} from 'react-router-dom'
 
 class Register extends React.Component{
@@ -16,7 +16,11 @@ class Register extends React.Component{
       return <Redirect to={redirectTo}/>
     }
     return (
-      <LoginAndRegister type='change' isShowLeft={true} updatePassword={this.updatePassword} msg={msg}/>
+      <LoginAndRegister type='change'
+                        isShowLeft={true}
+                        updatePassword={this.updatePassword}
+                        resetUserMsg={this.props.resetUserMsg}
+                        msg={msg}/>
     )
   }
 
@@ -32,5 +36,5 @@ class Register extends React.Component{
 }
 export default connect(
   state => state.user,
-  {updatePassword, resetUserRedirect}
+  {updatePassword, resetUserRedirect, resetUserMsg}
 )(Register);

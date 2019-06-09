@@ -4,22 +4,40 @@ import {Redirect} from 'react-router-dom'
 import {NavBar} from 'antd-mobile'
 import {getArticle, changeStatus} from '../../redux/action'
 import UserList from '../../components/user-list/user-list'
+import {Modal, Toast} from "antd-mobile/lib/index";
 class Admin extends Component {
+  state = {
+    isManager: true
+  };
   componentDidMount() {
-    this.props.getArticle();
+    Modal.prompt('登录', '请输入登录信息',
+      [
+        {
+          text: '取消',
+          onPress: () => {
+            Toast.info('成功取消', 1);
+            this.setState({isManager: false});
+          }
+        },
+        {
+          text: '确定',
+          onPress: (username, code) => {
+            if (username === 'admin' && code === '123456') {
+              this.setState({isManager: true});
+              this.forceUpdate();
+              this.props.getArticle();
+            } else {
+              Toast.fail('密码错误');
+              this.setState({isManager: false});
+            }
+          }
+        },
+      ], 'login-password', null)
   }
   render () {
     const {foodList} = this.props.lostFood;
-    const search = this.props.location.search;
-    let searCon = search.slice(1);
-    let allParams = {};
-    // eslint-disable-next-line
-    searCon.split('&').map(item => {
-      let oneParam = item.split('=');
-      allParams[oneParam[0]] = oneParam[1];
-    });
-    if (allParams.pw !== '123456') {
-      return <Redirect to='/home'/>
+    if (!this.state.isManager) {
+      return <Redirect to='home'/>
     }
     return (
       <div>
